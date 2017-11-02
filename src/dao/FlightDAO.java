@@ -18,9 +18,9 @@ public class FlightDAO {
 		
 		ArrayList<City> aux = new ArrayList<City>();
 		
-		aux.add(voo.getOrigem());
+		aux.add(voo.getCityOrigin());
 		aux.addAll(voo.getStops());
-		aux.add(voo.getDestino());
+		aux.add(voo.getCityDistin());
 		
 		return aux;
 	}

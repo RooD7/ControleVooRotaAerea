@@ -3,8 +3,10 @@ package model;
 import java.util.ArrayList;
 
 public class Flight {
+	
 	private City cityOrigin;
 	private City cityDistin;
+	private Route route;
 	private float distancia;
 	private ArrayList<City> stops;
 	private float time;
@@ -15,18 +17,6 @@ public class Flight {
 		this.cityDistin = cityDistin;
 	}
 	
-	public City getOrigem() {
-		return cityOrigin;
-	}
-	public void setOrigem(City cityOrigin) {
-		this.cityOrigin = cityOrigin;
-	}
-	public City getDestino() {
-		return cityDistin;
-	}
-	public void setDestino(City cityDistin) {
-		this.cityDistin = cityDistin;
-	}
 	public float getDistancia() {
 		return distancia;
 	}
@@ -45,5 +35,28 @@ public class Flight {
 	public void setTime(float time) {
 		this.time = time;
 	}
-	
+
+	public City getCityOrigin() {
+		return cityOrigin;
+	}
+
+	public void setCityOrigin(City cityOrigin) {
+		this.cityOrigin = cityOrigin;
+	}
+
+	public City getCityDistin() {
+		return cityDistin;
+	}
+
+	public void setCityDistin(City cityDistin) {
+		this.cityDistin = cityDistin;
+	}
+
+	public Route getRoute() {
+		return route;
+	}
+
+	public void setRoute(Route route) {
+		this.route = route;
+	}
 }

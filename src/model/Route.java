@@ -7,6 +7,11 @@ public class Route {
 	private City cityDistin;
 	private float distance;
 
+	public Route(City origem, City destino, float distancia) {
+		this.cityOrigin = origem;
+		this.cityDistin = destino;
+		this.distance = distancia;
+	}
 	
 	public int getId() {
 		return id;

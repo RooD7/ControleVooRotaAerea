@@ -1,19 +1,42 @@
 package service;
 
+import main.ControlCenter;
+import model.City;
 import model.Flight;
 import model.Route;
 
 public class FlightService {
-
-	private Route rotas;
+	
 	public FlightService(Route rotas) {
-		this.rotas = rotas;
+		
 	}
 	
-	public void addFlight(Flight voo) {
-		//if(voo)
+	// Criar Voo
+	public Flight createFlight(City origem, City destino) {
+		// Se as cidades existem, e existe uma rota entre elas, criar voo
+		if(ControlCenter.existCity(origem) && ControlCenter.existCity(destino))
+			if(RouteService.existRoute(origem, destino)) {
+				// Pode existir 2 voos com a mesma cidade de origem e destino
+				return new Flight(origem, destino);
+			}
+		
+		return null;
+	}
+		
+	// Adicionar  Voo
+	public void addFlight(Flight flight) {
+		ControlCenter.getFlights().add(flight);
 	}
 	
+	// Remover Voo
+	public void removeFlight(Flight flight) {
+		ControlCenter.getFlights().remove(flight);
+	}
 	
-	//Adicionar voo
+	// Adicionar Voo no Aeroporto
+	public void addFlightAirport(Flight voo) {
+				
+		// Se origem e destino do voo não possui uma rota, não adicionar
+	}
+	
 }
