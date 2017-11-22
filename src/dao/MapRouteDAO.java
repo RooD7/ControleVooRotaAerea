@@ -7,14 +7,14 @@ import model.MapRoute;
 
 public class MapRouteDAO {
 
-	private MapRoute rotas;
+	private static MapRoute rotas;
 	
 	public MapRouteDAO(MapRoute rotas) {
-		this.rotas = rotas;
+		MapRouteDAO.rotas = rotas;
 	}
 	
 	// Array com as rotas que possuem determinada distancia
-	public ArrayList<Route> getCordRoute(int distancia) {
+	public static ArrayList<Route> getCordRoute(float distancia) {
 		
 		ArrayList<Route> aux = new ArrayList<Route>();
 		
@@ -31,7 +31,7 @@ public class MapRouteDAO {
 	}
 
 	// retorna distancia segundo as coordenas x, y
-	public float getDistRoute(int x, int y) {
+	public static float getDistRoute(int x, int y) {
 		return rotas.getRoute(x, y).getDistance();
 	}
 	

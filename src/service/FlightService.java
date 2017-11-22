@@ -22,16 +22,6 @@ public class FlightService {
 		
 		return null;
 	}
-		
-	// Adicionar  Voo
-	public void addFlight(Flight flight) {
-		ControlCenter.getFlights().add(flight);
-	}
-	
-	// Remover Voo
-	public void removeFlight(Flight flight) {
-		ControlCenter.getFlights().remove(flight);
-	}
 	
 	// Adicionar Voo no Aeroporto
 	public void addFlightAirport(Flight voo) {

@@ -16,16 +16,6 @@ public class RouteService {
 		return new Route(origem, destino, distancia);
 	}
 	
-	// Adicionar  Route
-	public void addRoute(Route route) {
-		ControlCenter.getRoutes().add(route);
-	}
-	
-	// Remover Route
-	public void removeRoute(Route route) {
-		ControlCenter.getRoutes().remove(route);
-	}
-	
 	// Existe a Rota no mapRoute
 	public static boolean existRoute(Route route) {
 

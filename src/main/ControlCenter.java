@@ -36,6 +36,16 @@ public class ControlCenter {
 			routes.add(route);
 	}
 	
+	// Adicionar  Voo
+	public void addFlight(Flight flight) {
+		flights.add(flight);
+	}
+	
+	// Remover Voo
+	public void removeFlight(Flight flight) {
+		flights.remove(flight);
+	}
+	
 	public static void removeCity(City city) {
 		if(existCity(city))
 			citys.remove(city);
